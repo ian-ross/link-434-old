@@ -9,7 +9,7 @@ build:
 
 build/$(OUTFILE): $(OBJFILES)
 	$(info Linking $(OUTFILE)...)
-	@sdld -ni $@ $^
+	@sdld -nmuwxiMY -b main=0x0100 $@ $^
 	@mv $(addsuffix .ihx,$(basename $@)) $@
 
 build/%.rel: %.asm

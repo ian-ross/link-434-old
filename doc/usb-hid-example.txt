@@ -1,0 +1,39 @@
+src/
+  callback.c
+  descriptors.c
+  idle.c
+  initDevice.c
+  main.c
+  SILABS_STARTUP.A51
+
+inc/
+  config/
+    efm8_config.h
+    usbconfig.h
+  descriptors.h
+  idle.h
+  initDevice.h
+
+lib/
+  bsp/
+    bsp.h
+  efm8_assert/
+    assert.c
+    assert.h
+  efm8_usb/
+    inc/
+      efm8_usb.h
+    src/
+      efm8_usbd.c
+      efm8_usbdch9.c
+      efm8_usbdep.c
+      efm8_usbdint.c
+  efm8ub3/
+    peripheralDrivers/
+      inc/
+        usb_0.h
+      src/
+        usb_0.c
+  efm8ub3_sltb005a/
+    bsp/
+      bsp_config.h

@@ -1,4 +1,4 @@
-ASMFILES=blinky-boot.asm
+ASMFILES=blinky-boot.asm delay.asm
 OUTFILE=blinky-boot.hex
 INCS=../../code/include
 

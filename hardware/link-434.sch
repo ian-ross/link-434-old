@@ -785,8 +785,6 @@ Connection ~ 3000 1100
 Connection ~ 3150 1000
 Wire Wire Line
 	3150 1000 3150 1325
-Entry Wire Line
-	-1300 7075 -1200 7175
 Wire Wire Line
 	2800 3325 2800 3350
 Wire Wire Line

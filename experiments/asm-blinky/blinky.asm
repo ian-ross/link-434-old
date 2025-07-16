@@ -8,7 +8,7 @@
 
   .org 0x0100
 
-start:
+start::
   mov WDTCN, #0xDE
   mov WDTCN, #0xAD
 

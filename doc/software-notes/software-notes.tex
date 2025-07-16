@@ -1,0 +1,69 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage{amsmath,amssymb}
+\usepackage{xstring,ifthen,xcolor}
+\usepackage{xspace}
+\usepackage{url}
+
+\usepackage{color}
+\definecolor{orange}{rgb}{0.75,0.5,0}
+\definecolor{magenta}{rgb}{1,0,1}
+\definecolor{cyan}{rgb}{0,1,1}
+\definecolor{grey}{rgb}{0.25,0.25,0.25}
+\newcommand{\outline}[1]{{\color{grey}{\scriptsize #1}}}
+\newcommand{\todo}[1]{{\color{red}\textit{\textbf{#1}}}}
+\newcommand{\note}[1]{{\color{blue}\textit{\textbf{#1}}}}
+\newcommand{\citenote}[1]{{\color{orange}{[\textit{\textbf{#1}}]}}}
+
+\usepackage{tikz}
+\usepackage{pgfmath}
+\usetikzlibrary{calc,shapes,positioning}
+
+\title{Link-434: EFM8UB3 assembly programming notes}
+\author{Ian~Ross}
+
+\graphicspath{{figs/}}
+
+\begin{document}
+
+\maketitle
+
+These notes record things I've been picking up while experimenting
+with assembly programming on the Silicon Labs EFM8UB3.
+
+\section{Clock and I/O setup}
+
+The EFM8UB3 has two high-speed oscillators, \texttt{HFOSC0}
+(24.5\,MHz) and \texttt{HFOSC1} (48\,MHz). I've had trouble getting
+the SEGGER J-Link software to work with the EFM8 development board
+when using \texttt{HFOSC1} so for the moment I'm using the 24.5\,MHz
+oscillator. \emph{I'll need to get the 48\,MHz oscillator working for
+USB applications later on!}
+
+It's actually a little bit strange, because an application built using
+Simplicity Studio works fine with \texttt{HFOSC1}, which indicates
+that I'm doing something wrong somehow.
+
+\textbf{Get this working!}
+
+\section{Basic code patterns and macros}
+
+\begin{itemize}
+  \item{The \texttt{sdas8051} assembler that's part of the SDCC
+    distribution has some macro capabilities that make writing
+    assembly code a bit easier, but it doesn't support all of the
+    features documented in the SDAS manual. In particular, there's no
+    \texttt{ifnb} or similar, which makes writing variadic macros
+    difficult (impossible?).}
+\end{itemize}
+
+\section{Timers}
+
+\emph{Have successfully got something working using interrupts and
+timer 0 running off the 48 MHz HFOSC1 oscillator. Next step is to tidy
+that up a little and think about how to structure the whole ``Simon
+Says'' code.}
+
+\end{document}
