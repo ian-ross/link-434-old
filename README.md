@@ -1,5 +1,7 @@
 # link-434
 
+**OBSOLETE: THIS WAS ATTEMPT #1. GOING TO TRY SOMETHING A BIT DIFFERENT...**
+
 ISM 434 MHz band communications system:
 
  - Silicon Labs EFM8UB3 microcontroller.
